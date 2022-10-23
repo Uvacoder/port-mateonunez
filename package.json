@@ -18,6 +18,7 @@
     "@babel/core": "^7.19.6",
     "@babel/eslint-parser": "^7.19.1",
     "@elgorditosalsero/react-gtm-hook": "^2.6.0",
+    "@lyrasearch/lyra": "^0.2.7",
     "@mdx-js/loader": "^2.1.5",
     "@octokit/graphql": "^5.0.4",
     "@tailwindcss/typography": "^0.5.7",
