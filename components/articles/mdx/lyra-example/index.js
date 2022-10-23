@@ -2,7 +2,7 @@ import s from './lyra-example.module.css';
 
 import { pokemon as pokedex } from 'public/datasets/pokedex.json';
 import { create, formatNanoseconds, insert, search } from '@lyrasearch/lyra';
-import { useCallback, useEffect, useLayoutEffect, useState } from 'react';
+import { useCallback, useLayoutEffect, useState } from 'react';
 import { SearchInput } from 'components/input';
 
 export default function MDXLyraExample() {
@@ -42,10 +42,6 @@ export default function MDXLyraExample() {
   const onClearTerm = useCallback(() => {
     setResults([]);
   }, []);
-
-  useEffect(() => {
-    console.log(elapsed);
-  }, [elapsed]);
 
   return (
     <div className={s.root}>
