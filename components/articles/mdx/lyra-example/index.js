@@ -30,7 +30,6 @@ export default function MDXLyraExample() {
     term => {
       if (term) {
         const { hits, elapsed } = search(lyra, { term });
-        console.log({ elapsed });
         setResults(hits);
         setElapsed(elapsed);
       }
