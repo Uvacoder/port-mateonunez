@@ -12,3 +12,5 @@ export { default as User } from './User';
 export { default as Star } from './Star';
 export { default as Fork } from './Fork';
 export { default as Twitter } from './Twitter';
+export { default as Cross } from './Cross';
+export { default as MagnifyingGlass } from './magnifying-glass';
