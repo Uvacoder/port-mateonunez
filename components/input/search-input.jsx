@@ -2,7 +2,7 @@ import { useRef, useState, useMemo, useEffect } from 'react';
 import { Cross, MagnifyingGlass } from 'components';
 import Input from './input';
 
-export default function SearchInput({ autofocus = false, callback, actionCallback }) {
+export default function SearchInput({ placeholder, autofocus = false, callback, actionCallback }) {
   const inputRef = useRef(null);
   const [term, setTerm] = useState('');
   // eslint-disable-next-line no-unused-vars
@@ -22,7 +22,7 @@ export default function SearchInput({ autofocus = false, callback, actionCallbac
         ref={inputRef}
         value={term}
         autofocus={autofocus}
-        placeholder="Insert a term..."
+        placeholder={placeholder || 'Search'}
         onChange={({ target: { value } }) => setTerm(value)}
         onFocus={() => setIsFocus(true)}
         onBlur={() => setIsFocus(false)}
