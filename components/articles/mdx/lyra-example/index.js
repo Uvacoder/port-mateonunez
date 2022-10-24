@@ -13,16 +13,15 @@ export default function MDXLyraExample() {
   useLayoutEffect(() => {
     const lyra = create({
       schema: {
-        num: 'string',
         name: 'string',
-        img: 'string'
+        url: 'string'
       }
     });
 
     setLyra(lyra);
 
-    for (const { num, name, img } of pokedex) {
-      insert(lyra, { num, name, img });
+    for (const { name, url } of pokedex) {
+      insert(lyra, { name, url });
     }
   }, []);
 
@@ -50,7 +49,11 @@ export default function MDXLyraExample() {
       </span>
 
       <div className="mt-2">
-        <SearchInput callback={searchCallback} actionCallback={onClearTerm} />
+        <SearchInput
+          placeholder="Search a Pokemon"
+          callback={searchCallback}
+          actionCallback={onClearTerm}
+        />
       </div>
 
       {results.length > 0 && (
