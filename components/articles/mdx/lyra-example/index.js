@@ -1,9 +1,11 @@
 import s from './lyra-example.module.css';
 
-import { pokemon as pokedex } from 'public/datasets/pokedex.json';
+import pokedex from 'public/datasets/pokedex.json';
 import { create, formatNanoseconds, insert, search } from '@lyrasearch/lyra';
 import { useCallback, useLayoutEffect, useState } from 'react';
 import { SearchInput } from 'components/input';
+
+const { pokemon } = pokedex;
 
 export default function MDXLyraExample() {
   const [lyra, setLyra] = useState(null);
@@ -20,7 +22,7 @@ export default function MDXLyraExample() {
 
     setLyra(lyra);
 
-    for (const { name, url } of pokedex) {
+    for (const { name, url } of pokemon) {
       insert(lyra, { name, url });
     }
   }, []);
